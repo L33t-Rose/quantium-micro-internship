@@ -7,7 +7,7 @@ product_target = 'pink morsel'
 # https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-blank-lines-between-each-row
 with open('output.csv','+w',newline='') as output_file:
     writer = csv.writer(output_file,delimiter=",",)
-    writer.writerow(['sales','data','region'])
+    writer.writerow(['sales','date','region'])
     for csv_file in csv_files:
         with open(f'./data/{csv_file}','r') as f:
             # Read the file contents,split on \n, and remove the first column
