@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #b5bddf;
+  --secondary: #3856da;
+  --tertiary: white;
+}
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.sales__region {
+  display: flex;
+  gap: 0.25rem;
+}
+.sales__region__button {
+  padding: 0.5rem 0.25rem;
+  border: 2px solid var(--secondary);
+  min-width: 4rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+}
+
+.sales__region__button input[type="radio"] {
+  width: 0;
+  /* padding: 0.5rem 0.25rem; */
+}
+:where(.sales__region__button:has(input[type="radio"]:checked)) {
+  background: var(--secondary);
+  color: var(--tertiary);
+}
